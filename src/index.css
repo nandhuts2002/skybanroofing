@@ -474,3 +474,286 @@ h6 {
     grid-template-columns: 1fr !important;
   }
 }
+
+/* ================================================================
+   COMPREHENSIVE MOBILE FIXES
+================================================================ */
+
+/* ── Navbar ── */
+@media (max-width: 768px) {
+  nav[style*="padding"] {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+/* ── Hero Section ── */
+@media (max-width: 768px) {
+  /* Hero content area */
+  .hero-content-area {
+    padding-top: 100px !important;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+    padding-bottom: 32px !important;
+  }
+
+  /* Hero buttons — stack on mobile */
+  .hero-btns {
+    flex-direction: column !important;
+    gap: 12px !important;
+  }
+  .hero-btns button {
+    width: 100% !important;
+    text-align: center !important;
+    justify-content: center !important;
+  }
+
+  /* Hero feature bar — 2 cols on mobile instead of 5 */
+  .hero-feature-bar {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+  }
+  .hero-feature-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.07) !important;
+    padding: 14px 12px !important;
+  }
+  .hero-feature-item:nth-child(odd) {
+    border-right: 1px solid rgba(255,255,255,0.07) !important;
+  }
+  .hero-feature-item:nth-last-child(-n+2) {
+    border-bottom: none !important;
+  }
+}
+
+/* ── Features / Homepage Sections ── */
+@media (max-width: 768px) {
+  /* Products section: 2-col text+image → single col */
+  .products-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* Two featured product cards → stack */
+  .featured-cards-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* All 5 collections row → 2 col grid */
+  .collections-row {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* About section: video + text → stack */
+  .about-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+
+  /* Stats in about section: 2x2 on mobile */
+  .stats-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 0 !important;
+  }
+  .stat-item {
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.08) !important;
+    padding: 16px 8px !important;
+  }
+  .stat-item:nth-child(odd) {
+    border-right: 1px solid rgba(255,255,255,0.08) !important;
+  }
+  .stat-item:nth-last-child(-n+2) {
+    border-bottom: none !important;
+  }
+
+  /* Why Skyban: 6-col → 2-col */
+  .why-features-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+
+  /* Why section header: 2-col → 1-col */
+  .why-header-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+
+  /* Projects: 4-col → 2-col */
+  .projects-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+  }
+
+  /* CTA section: 2-col → 1-col, center */
+  .cta-grid {
+    grid-template-columns: 1fr !important;
+    gap: 24px !important;
+    text-align: center !important;
+  }
+  .cta-grid button {
+    margin: 0 auto !important;
+  }
+
+  /* Section padding reduction */
+  section {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* On very small screens: collections → 1 col */
+  .collections-row {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Projects → 1 col */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Why features → 1 col */
+  .why-features-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── Footer ── */
+@media (max-width: 768px) {
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .footer-bottom {
+    flex-direction: column !important;
+    text-align: center !important;
+    gap: 12px !important;
+  }
+  .footer-bottom div {
+    justify-content: center !important;
+  }
+}
+
+/* ── Products Page ── */
+@media (max-width: 768px) {
+  .products-tab-bar {
+    gap: 8px !important;
+  }
+  .products-tab-bar button {
+    padding: 8px 16px !important;
+    font-size: 12px !important;
+  }
+  .product-detail-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .product-specs-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+/* ── Contact Page ── */
+@media (max-width: 768px) {
+  .contact-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .contact-form {
+    padding: 24px 20px !important;
+  }
+}
+
+/* ── Services Page ── */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr !important;
+    gap: 16px !important;
+  }
+  .process-steps-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 24px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .process-steps-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── About Page ── */
+@media (max-width: 768px) {
+  .about-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 32px !important;
+  }
+  .about-values-grid {
+    grid-template-columns: 1fr 1fr !important;
+    gap: 16px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-values-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ── General mobile typography ── */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Prevent horizontal scroll from any overflowing elements */
+  .overflow-x-hidden-mobile {
+    overflow-x: hidden !important;
+  }
+
+  /* Hero gradient: on mobile, darken from top to bottom for readability */
+  .hero-gradient-overlay {
+    background: linear-gradient(
+      to bottom,
+      rgba(5,5,5,0.75) 0%,
+      rgba(5,5,5,0.55) 50%,
+      rgba(5,5,5,0.7) 100%
+    ) !important;
+  }
+
+  /* Hero text: center align on mobile */
+  .hero-content-area > div {
+    max-width: 100% !important;
+    text-align: left;
+  }
+
+  /* Reduce huge font sizes on very small screens */
+  .hero-content-area h1 {
+    font-size: clamp(34px, 9vw, 56px) !important;
+  }
+
+  /* Footer reduce top padding */
+  footer {
+    padding-top: 48px !important;
+  }
+
+  /* Section vertical padding reduction on mobile */
+  section[style*="clamp(64px"] {
+    padding-top: clamp(40px, 8vw, 64px) !important;
+    padding-bottom: clamp(40px, 8vw, 64px) !important;
+  }
+
+  /* Product page tab bar scrollable */
+  .products-tab-bar {
+    overflow-x: auto;
+    padding-bottom: 8px;
+    justify-content: flex-start !important;
+    flex-wrap: nowrap !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  .products-tab-bar::-webkit-scrollbar {
+    height: 0;
+  }
+}

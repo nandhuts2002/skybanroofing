@@ -45,7 +45,7 @@ const Navbar = () => {
           background: scrolled ? 'rgba(10, 10, 10, 0.98)' : 'rgba(10, 10, 10, 0.15)',
           backdropFilter: 'blur(30px)',
           borderBottom: scrolled ? '1px solid rgba(255,255,255,0.1)' : '1px solid transparent',
-          padding: scrolled ? '16px 60px' : '22px 60px',
+          padding: scrolled ? `16px clamp(16px, 5vw, 60px)` : `22px clamp(16px, 5vw, 60px)`,
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',

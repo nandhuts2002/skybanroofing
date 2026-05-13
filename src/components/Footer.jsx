@@ -8,7 +8,7 @@ const Footer = () => {
   return (
     <footer style={{ background: '#0a0a0a', color: 'rgba(255,255,255,0.65)', padding: '80px 0 40px', borderTop: '1px solid rgba(255,255,255,0.05)' }}>
       <div style={{ maxWidth: '1100px', margin: '0 auto', padding: '0 24px' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '48px', marginBottom: '64px' }}>
+        <div className="footer-grid" style={{ display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '48px', marginBottom: '64px' }}>
           {/* Brand */}
           <div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '16px', marginBottom: '32px' }}>
@@ -128,7 +128,7 @@ const Footer = () => {
         </div>
 
         {/* Divider & Copyright */}
-        <div style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
+        <div className="footer-bottom" style={{ borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '32px', display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '16px' }}>
           <p style={{ fontFamily: 'Inter', fontWeight: 300, fontSize: '13px' }}>
             &copy; {currentYear} Skyban Roofing Systems. All rights reserved.
           </p>

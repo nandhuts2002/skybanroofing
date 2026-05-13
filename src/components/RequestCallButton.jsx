@@ -33,21 +33,21 @@ export default function RequestCallButton() {
         whileTap={{ scale: 0.95 }}
         style={{
           position: 'fixed',
-          bottom: '40px',
-          right: '40px',
+          bottom: '24px',
+          right: '20px',
           zIndex: 8999,
           background: 'linear-gradient(135deg, #cfa25d, #b88c4b)',
           border: 'none',
           borderRadius: '9999px',
-          padding: '16px 28px',
+          padding: '14px 22px',
           display: 'flex',
           alignItems: 'center',
-          gap: '12px',
+          gap: '10px',
           cursor: 'pointer',
           boxShadow: '0 12px 32px rgba(207,162,93,0.4)',
           fontFamily: 'Inter',
           fontWeight: 700,
-          fontSize: '15px',
+          fontSize: '14px',
           color: 'white',
         }}
       >
@@ -65,7 +65,7 @@ export default function RequestCallButton() {
             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
           </svg>
         </motion.div>
-        Request a Call
+        <span className="hidden md:inline">Request a Call</span>
       </motion.button>
 
       {/* Glassmorphism Modal */}

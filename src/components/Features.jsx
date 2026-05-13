@@ -10,35 +10,35 @@ const collections = [
     id: 'shake',
     name: 'Shake Collection',
     tag: 'TRADITIONAL',
-    image: `${BASE}premium_shake_roof.png`,
+    image: `${BASE}shake_collection.png`,
     bullets: ['Deep-ribbed profiles', 'Visual contrast & shadow lines', 'Weather resistant', 'Lightweight'],
   },
   {
     id: 'classic',
     name: 'Classic Collection',
     tag: 'TIMELESS',
-    image: `${BASE}premium_classic_roof.png`,
+    image: `${BASE}classic_collection.png`,
     bullets: ['Smooth flowing curves', 'Bold timeless lines', 'High durability', 'Universal appeal'],
   },
   {
     id: 'bond',
     name: 'Bond Collection',
     tag: 'MODERN',
-    image: `${BASE}premium_bond_roof.png`,
+    image: `${BASE}bond_collection.png`,
     bullets: ['Low-profile interlocking system', 'Contemporary architecture', 'Secure & watertight fit', 'Commercial grade'],
   },
   {
     id: 'shingle',
     name: 'Shingle Collection',
     tag: 'ELEGANT',
-    image: `${BASE}premium_shingle_roof.png`,
+    image: `${BASE}shingle_collection.png`,
     bullets: ['Asphalt shingle look', 'Stone-coated steel', 'High-tensile strength', 'Elegant finish'],
   },
   {
     id: 'roman',
     name: 'Roman Collection',
     tag: 'MEDITERRANEAN',
-    image: `${BASE}premium_roman_roof.png`,
+    image: `${BASE}roman_collection.png`,
     bullets: ['Mediterranean clay tile look', 'Distinctive curved profile', 'Storm-proof', 'Lightweight'],
   },
 ];
@@ -81,7 +81,7 @@ const Features = () => {
           1. OUR PRODUCTS — left text | right: featured tile images
           ══════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#fff', padding: 'clamp(64px,8vw,120px) clamp(24px,6vw,100px)' }}>
-        <div style={{ maxWidth: '1300px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '64px', alignItems: 'start' }}>
+        <div className="products-grid" style={{ maxWidth: '1300px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1.6fr', gap: '64px', alignItems: 'start' }}>
           
           {/* Left: text */}
           <motion.div {...fadein(0)}>
@@ -109,7 +109,7 @@ const Features = () => {
           </motion.div>
 
           {/* Right: two collection cards */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
+          <div className="featured-cards-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '20px' }}>
             {collections.slice(0, 2).map((col, i) => (
               <motion.div
                 key={col.id}
@@ -172,7 +172,7 @@ const Features = () => {
         </div>
 
         {/* All 5 collections row */}
-        <div style={{ maxWidth: '1300px', margin: '48px auto 0', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '16px' }}>
+        <div className="collections-row" style={{ maxWidth: '1300px', margin: '48px auto 0', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '16px' }}>
           {collections.map((col, i) => (
             <motion.div
               key={col.id}
@@ -200,7 +200,7 @@ const Features = () => {
           2. ABOUT SKYBAN — video left | text + stats right
           ══════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#0c0c0c', padding: 'clamp(64px,8vw,120px) clamp(24px,6vw,100px)' }}>
-        <div style={{ maxWidth: '1300px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }}>
+        <div className="about-grid" style={{ maxWidth: '1300px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '64px', alignItems: 'center' }}>
           
           {/* Left: video */}
           <motion.div {...fadein(0)} style={{ position: 'relative' }}>
@@ -255,14 +255,14 @@ const Features = () => {
             </p>
 
             {/* Stats */}
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '32px' }}>
+            <div className="stats-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '0', borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '32px' }}>
               {[
                 { value: '10+', label: 'Years of\nExcellence' },
                 { value: '1000+', label: 'Projects\nCompleted' },
                 { value: '500+', label: 'Happy\nCustomers' },
                 { value: '100%', label: 'Quality\nAssurance' },
               ].map((stat, i) => (
-                <div key={i} style={{
+                <div key={i} className="stat-item" style={{
                   textAlign: 'center',
                   padding: '0 12px',
                   borderRight: i < 3 ? '1px solid rgba(255,255,255,0.08)' : 'none',
@@ -283,7 +283,7 @@ const Features = () => {
         <div style={{ maxWidth: '1300px', margin: '0 auto' }}>
           
           {/* Header row */}
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'end', marginBottom: '56px' }}>
+          <div className="why-header-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'end', marginBottom: '56px' }}>
             <motion.div {...fadein(0)}>
               <p style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '4px', color: '#cfa25d', textTransform: 'uppercase', marginBottom: '16px' }}>Why Choose Skyban</p>
               <h2 style={{ fontFamily: 'Playfair Display, Georgia, serif', fontSize: 'clamp(28px, 3vw, 44px)', fontWeight: 700, color: '#0a0a0a', lineHeight: 1.25 }}>
@@ -297,7 +297,7 @@ const Features = () => {
           </div>
 
           {/* 6-feature grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '24px' }}>
+          <div className="why-features-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(6, 1fr)', gap: '24px' }}>
             {whyFeatures.map((f, i) => (
               <motion.div
                 key={i}
@@ -351,7 +351,7 @@ const Features = () => {
           </div>
 
           {/* Project grid */}
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
+          <div className="projects-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(4, 1fr)', gap: '16px' }}>
             {projects.map((proj, i) => (
               <motion.div
                 key={i}
@@ -384,7 +384,7 @@ const Features = () => {
           5. READY TO ELEVATE — CTA
           ══════════════════════════════════════════════════════════════ */}
       <section style={{ background: '#f4f1ec', padding: 'clamp(48px,6vw,80px) clamp(24px,6vw,100px)' }}>
-        <div style={{ maxWidth: '1300px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
+        <div className="cta-grid" style={{ maxWidth: '1300px', margin: '0 auto', display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '40px', alignItems: 'center' }}>
           <motion.div {...fadein(0)}>
             <h2 style={{ fontFamily: 'Playfair Display, Georgia, serif', fontSize: 'clamp(26px, 3vw, 40px)', fontWeight: 700, color: '#0a0a0a', lineHeight: 1.25 }}>
               Ready to elevate<br/>your roof?

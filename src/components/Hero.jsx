@@ -25,14 +25,14 @@ const Hero = () => {
         />
         {/* Dark gradient — heavier on the left like reference */}
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 hero-gradient-overlay"
           style={{ background: 'linear-gradient(90deg, rgba(5,5,5,0.94) 0%, rgba(5,5,5,0.75) 40%, rgba(5,5,5,0.25) 70%, rgba(5,5,5,0.15) 100%)' }} 
         />
         <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0) 50%, rgba(0,0,0,0.6) 100%)' }} />
       </div>
 
       {/* Main Content — pushed below top bar + navbar */}
-      <div className="relative z-10 flex-1 flex items-center" style={{ paddingTop: '120px', paddingLeft: 'clamp(24px, 6vw, 100px)', paddingRight: 'clamp(24px, 6vw, 100px)', paddingBottom: '40px' }}>
+      <div className="hero-content-area relative z-10 flex-1 flex items-center" style={{ paddingTop: '120px', paddingLeft: 'clamp(24px, 6vw, 100px)', paddingRight: 'clamp(24px, 6vw, 100px)', paddingBottom: '40px' }}>
         <div style={{ maxWidth: '680px' }}>
           
           <motion.p 
@@ -59,6 +59,7 @@ const Hero = () => {
 
           <motion.div 
             initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}
+            className="hero-btns"
             style={{ display: 'flex', gap: '16px', flexWrap: 'wrap' }}
           >
             <button
@@ -96,7 +97,7 @@ const Hero = () => {
 
       {/* Feature Bar */}
       <div className="relative z-20 w-full" style={{ background: 'rgba(10,10,10,0.97)', backdropFilter: 'blur(10px)', borderTop: '1px solid rgba(255,255,255,0.07)' }}>
-        <div style={{ maxWidth: '1300px', margin: '0 auto', padding: '22px clamp(24px, 6vw, 60px)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '8px' }}>
+        <div className="hero-feature-bar" style={{ maxWidth: '1300px', margin: '0 auto', padding: '22px clamp(24px, 6vw, 60px)', display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '8px' }}>
           {[
             { icon: icons.quality, title: 'Premium Quality', sub: 'Best in class materials' },
             { icon: icons.weather, title: 'Weather Resistant', sub: 'Built for all climates' },
@@ -106,6 +107,7 @@ const Hero = () => {
           ].map((item, i) => (
             <div 
               key={i} 
+              className="hero-feature-item"
               style={{
                 display: 'flex', alignItems: 'center', gap: '12px',
                 padding: '12px 16px',
